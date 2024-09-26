@@ -1,0 +1,18 @@
+% Definir la matriz a y el vector b
+a = [0.0001 1 1; 1 0.0001 1; 1 1 0.0001];
+b = [1; 1; 1];
+
+% Calcular la solución del sistema de ecuaciones
+x = inv(a) * b;
+
+% Graficar los valores de la solución x
+figure;
+bar(x); % Graficar los resultados de x en una gráfica de barras
+title('Solución del sistema a*x = b');
+xlabel('Índice de x');
+ylabel('Valor de x');
+grid on;
+
+% Mostrar la condición de la matriz y el determinante
+fprintf('Condición de la matriz a: %f\n', cond(a));
+fprintf('Determinante de la matriz a: %f\n', det(a));
